@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatería - Portafolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Imagen de fondo de zapatos/tienda */
+            background-image: url('images/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Capa oscura sobre la imagen para mejor legibilidad */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        header, main, footer {
+            background-color: rgba(255, 255, 255, 0.92);
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.9) 100%);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        nav {
+            margin: 20px 0;
+            padding: 15px;
+            background: #3498db;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        nav a:hover {
+            background: #2980b9;
+        }
+
+        section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+        }
+
+        article {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+        }
+
+        footer a {
+            color: #3498db;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #3498db, #2c3e50, #3498db);
+            margin: 30px 0;
+        }
+
+        #inicio {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+        }
+
+        #inicio a {
+            display: inline-block;
+            background: #2e3431;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        #inicio a:hover {
+            background: #34433b;
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header, main, footer {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>  Mi Zapatería</h1>
+        <p><strong>Los mejores zapatos para cada ocasión</strong></p>
+        
+        <nav>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sección Héroe -->
+        <section id="inicio">
+            <h2>  Bienvenido a Mi Zapatería</h2>
+            <p>Descubre nuestra colección exclusiva de zapatos para hombre, mujer y niños. Calidad, estilo y comodidad en cada par.</p>
+            <a href="#catalogo">Ver catálogo →</a>
+        </section>
+
+        <!-- Sobre Nosotros -->
+        <section id="sobre-nosotros">
+            <h2> Sobre Nosotros</h2>
+            <p>Somos una zapatería con más de <strong>10 años de experiencia</strong> ofreciendo calzado de alta calidad. Nos especializamos en encontrar el zapato perfecto para cada persona y ocasión.</p>
+            <ul style="margin-top: 15px; margin-left: 20px;">
+                <li>  Más de 500 modelos disponibles</li>
+                <li>  Marcas nacionales e internacionales</li>
+                <li>  Atención personalizada</li>
+                <li>  Envíos a todo el país</li>
+            </ul>
+        </section>
+
+        <!-- Servicios / Características -->
+        <section id="servicios">
+            <h2>  Nuestros Servicios</h2>
+
+            <article>
+                <h3>  Venta en Tienda</h3>
+                <p>Visítanos y prueba nuestros modelos. Contamos con asesores especializados que te ayudarán a encontrar el calzado ideal según tu estilo y necesidad.</p>
+            </article>
+
+            <article>
+                <h3>  Envío a Domicilio</h3>
+                <p>Realizamos envíos rápidos y seguros a cualquier parte del país. Compra desde la comodidad de tu hogar y recibe tu pedido en 24 a 72 horas.</p>
+            </article>
+
+            <article>
+                <h3>  Cambios y Devoluciones</h3>
+                <p>¿No era tu talla? No te preocupes. Ofrecemos cambios sin costo dentro de los primeros 15 días después de tu compra.</p>
+            </article>
+
+            <article>
+                <h3>  Mantenimiento de Calzado</h3>
+                <p>Contamos con un servicio especializado de limpieza, reparación y mantenimiento para que tus zapatos duren mucho más tiempo.</p>
+            </article>
+        </section>
+
+        <div style="text-align: center;">
+            <button onclick="location.href='#catalogo'">  Ver Catálogo Completo</button>
+        </div>
+
+        <!-- Catálogo -->
+        <section id="catalogo">
+            <h2>  Catálogo de Zapatos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Categoría</th>
+                        <th>Tallas disponibles</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Classic Runner</td>
+                        <td>Deportivo</td>
+                        <td>36 - 44</td>
+                        <td>$59.99</td>
+                    </tr>
+                    <tr>
+                        <td>Urban Walker</td>
+                        <td>Casual</td>
+                        <td>35 - 43</td>
+                        <td>$49.99</td>
+                    </tr>
+                    <tr>
+                        <td>Elegance Pro</td>
+                        <td>Formal</td>
+                        <td>38 - 45</td>
+                        <td>$89.99</td>
+                    </tr>
+                    <tr>
+                        <td>Kids Step</td>
+                        <td>Niños</td>
+                        <td>20 - 35</td>
+                        <td>$34.99</td>
+                    </tr>
+                    <tr>
+                        <td>Trail Blazer</td>
+                        <td>Outdoor</td>
+                        <td>37 - 46</td>
+                        <td>$74.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>  Contacto</h2>
+            <p><strong>  Horario:</strong> Lunes a Sábado 9:00 AM - 8:00 PM</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IN5AM Zapatería. Todos los derechos reservados.</p>
+        <p>
+            <a href="#inicio">Inicio</a> |
+            <a href="#servicios">Servicios</a> |
+            <a href="#catalogo">Catálogo</a> |
+            <a href="#contacto">Contacto</a>
+        </p>
+    </footer>
+
+</body>
+</html>
+
