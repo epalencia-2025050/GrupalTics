@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Zapatos</title>
+<link rel="stylesheet" href="styles.css">
+
+<script>
+function mostrarTab(id) {
+  document.querySelectorAll('.content').forEach(el => {
+    el.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</head>
+<body>
+    <header>
+        <h1>  Mi Zapatería</h1>
+        <p><strong>Los mejores zapatos para cada ocasión</strong></p>
+       
+        <nav>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+ 
+    <main>
+ 
+        <!-- Sección Héroe -->
+        <section id="inicio">
+            <h2>  Bienvenido a Mi Zapatería</h2>
+            <p>Descubre nuestra colección exclusiva de zapatos para hombre, mujer y niños. Calidad, estilo y comodidad en cada par.</p>
+            <a href="#catalogo">Ver catálogo →</a>
+        </section>
+ 
+        <!-- Sobre Nosotros -->
+        <section id="sobre-nosotros">
+            <h2> Sobre Nosotros</h2>
+            <p>Somos una zapatería con más de <strong>10 años de experiencia</strong> ofreciendo calzado de alta calidad. Nos especializamos en encontrar el zapato perfecto para cada persona y ocasión.</p>
+            <ul style="margin-top: 15px; margin-left: 20px;">
+                <li>  Más de 500 modelos disponibles</li>
+                <li>  Marcas nacionales e internacionales</li>
+                <li>  Atención personalizada</li>
+                <li>  Envíos a todo el país</li>
+            </ul>
+        </section>
+ 
+        <!-- Servicios / Características -->
+        <section id="servicios">
+            <h2>  Nuestros Servicios</h2>
+ 
+            <article>
+                <h3>  Venta en Tienda</h3>
+                <p>Visítanos y prueba nuestros modelos. Contamos con asesores especializados que te ayudarán a encontrar el calzado ideal según tu estilo y necesidad.</p>
+            </article>
+ 
+            <article>
+                <h3>  Envío a Domicilio</h3>
+                <p>Realizamos envíos rápidos y seguros a cualquier parte del país. Compra desde la comodidad de tu hogar y recibe tu pedido en 24 a 72 horas.</p>
+            </article>
+ 
+            <article>
+                <h3>  Cambios y Devoluciones</h3>
+                <p>¿No era tu talla? No te preocupes. Ofrecemos cambios sin costo dentro de los primeros 15 días después de tu compra.</p>
+            </article>
+ 
+            <article>
+                <h3>  Mantenimiento de Calzado</h3>
+                <p>Contamos con un servicio especializado de limpieza, reparación y mantenimiento para que tus zapatos duren mucho más tiempo.</p>
+            </article>
+        </section>
+ 
+        <div style="text-align: center;">
+            <button onclick="location.href='#catalogo'">  Ver Catálogo Completo</button>
+        </div>
+ 
+        <!-- Catálogo -->
+        <section id="catalogo">
+            <h2>  Catálogo de Zapatos</h2>
+ 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Categoría</th>
+                        <th>Tallas disponibles</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Classic Runner</td>
+                        <td>Deportivo</td>
+                        <td>36 - 44</td>
+                        <td>$59.99</td>
+                    </tr>
+                    <tr>
+                        <td>Urban Walker</td>
+                        <td>Casual</td>
+                        <td>35 - 43</td>
+                        <td>$49.99</td>
+                    </tr>
+                    <tr>
+                        <td>Elegance Pro</td>
+                        <td>Formal</td>
+                        <td>38 - 45</td>
+                        <td>$89.99</td>
+                    </tr>
+                    <tr>
+                        <td>Kids Step</td>
+                        <td>Niños</td>
+                        <td>20 - 35</td>
+                        <td>$34.99</td>
+                    </tr>
+                    <tr>
+                        <td>Trail Blazer</td>
+                        <td>Outdoor</td>
+                        <td>37 - 46</td>
+                        <td>$74.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+ 
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>  Contacto</h2>
+            <p><strong>  Horario:</strong> Lunes a Sábado 9:00 AM - 8:00 PM</p>
+        </section>
+ 
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 IN5AM Zapatería. Todos los derechos reservados.</p>
+        <p>
+            <a href="#inicio">Inicio</a> |
+            <a href="#servicios">Servicios</a> |
+            <a href="#catalogo">Catálogo</a> |
+            <a href="#contacto">Contacto</a>
+        </p>
+    </footer>
+ 
+</body>
+<driv?>
+
+<div class="tabs">
+<div class="tab" onclick="mostrarTab('modelos')">Modelos</div>
+</div>
+
+<div id="Modelos" class="content active">
+  
+  <div class="card">
+    <img src="\GrupalTics\images/jordan.png" alt="jordan estilosos" width="170px">
+    <p><strong>Marca:</strong> Jordan</p>
+    <p><strong>Made in:</strong> Guatemala</p>
+    <p><strong>Precio:</strong> Q1500</p>
+    <p><strong>Talla:</strong> 41</p>
+    <p><strong>Tipo:</strong> <span class="tipo-limitado">Limitado</span></p>
+    <button onclick="agregarCarrito()">Agregar al carrito</button>
+  </div>
+
+<div class="card">
+  <img src="/images/jordan2.jpg" alt="jordan" width="170px">
+    <p><strong>Marca:</strong> Jordan Retro4</p>
+    <p><strong>Made in:</strong> Guatemala</p>
+    <p><strong>Precio:</strong> Q1500</p>
+    <p><strong>Talla:</strong> 40</p>
+    <p><strong>Tipo:</strong> <span class="tipo-Comun">Comun</span></p>
+    <button onclick="agregarCarrito()">Agregar al carrito</button>
+</div>
+
+
+
+
+</html>
